@@ -1,0 +1,16 @@
+{% extends "root.html" %}
+
+{% block main %}
+<form method="post">
+    {{ form.csrf_token }}
+    <div class="row">
+      <h3>Enter username</h3>
+      <div class="col">
+        {{ form.username(class="form-control") }}
+      </div>
+      <div class="col">
+        {{ form.submit(class="btn btn-primary") }}
+      </div>
+    </div>
+</form>
+{% endblock main %}

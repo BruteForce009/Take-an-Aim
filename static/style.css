@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252A;
+}
+
+li, a, button {
+  font-family: "Andalé Mono", monospace;
+  font-weight: 500;
+  font-size: 15px;
+  color: #edf0f1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+} */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 5%;
+  width: auto;
+  color: #24252A;
+}
+
+/* .logo {
+  cursor: pointer;
+} */
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0.1s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgba(30, 150, 150, 1);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0.1s;
+}
+
+button:hover {
+  background-color: rgba(30, 150, 150, 0.7);
+}

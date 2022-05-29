@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Take an Aim</title>
+    <link rel="icon" type="image/png" href="/static/images/aim-logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <img src="/static/images/aim-logo-x.png" class="logo" alt="logo" height=80px width=240px>
+    <!-- <img src="../images/aim-logo.png" class="logo" alt="logo" height=60px width=60px> -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('play')}}"><button>Play</button></a></li>
+            <li><a href="{{ url_for('leaderboard')}}"><button>Leaderboard</button></a></li>
+            <li><a href="{{ url_for('about')}}"><button>About</button></a></li>
+        </ul>
+    </nav>
+</header>
+{% block main %}
+{% endblock main %}
+</body>
+</html>
