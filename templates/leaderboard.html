@@ -3,8 +3,8 @@
 {% block main %}
     {% for task in tasks %}
     <div class="card">
-        <span><h3>{{ task.username }}</h3></span>
-        <span id="added-on"><h3><p>{{ task.date }}{{task.time}}</p></span>
+        <span>{{ task.username }}</span>
+        <span id="added-on">{{ task.date }}</span>
         <span><a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger"><button type="button" id="delete-btn">Delete</button></a></span>
       </div>
   {% endfor %}
