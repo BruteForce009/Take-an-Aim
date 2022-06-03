@@ -1,8 +1,9 @@
-* {
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #24252A;
+  /* background-color: #3A3B3C; */
+  background-color: #AAAAAA;
 }
 
 li, a, button {
@@ -27,7 +28,8 @@ header {
   align-items: center;
   padding: 30px 5%;
   width: auto;
-  color: #24252A;
+  /* background-color: #242526; */
+  background-color: #3A3B3C;
 }
 
 /* .logo {

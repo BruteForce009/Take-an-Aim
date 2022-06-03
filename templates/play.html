@@ -1,16 +1,18 @@
 {% extends "root.html" %}
 
 {% block main %}
-<form method="post">
-    {{ form.csrf_token }}
-    <div class="row">
-      <h3>Enter username</h3>
-      <div class="col">
-        {{ form.username(class="form-control") }}
+<div class="form-wrapper">
+  <form method="post">
+      {{ form.csrf_token }}
+      <div class="col" id="main-col">
+        Enter username
+        <div class="col" id="form-username">
+          {{ form.username(class="form-control") }}
+        </div>
+        <div class="col" id="form-submit">
+          {{ form.submit(class="btn btn-primary") }}
+        </div>
       </div>
-      <div class="col">
-        {{ form.submit(class="btn btn-primary") }}
-      </div>
-    </div>
-</form>
+  </form>
+</div>
 {% endblock main %}

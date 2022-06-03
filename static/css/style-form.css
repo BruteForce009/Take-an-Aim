@@ -1,0 +1,7 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 100px 5px;
+  font-family: "Monaco" ,monospace;
+  font-size: 25px;
+}

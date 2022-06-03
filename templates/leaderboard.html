@@ -3,11 +3,9 @@
 {% block main %}
     {% for task in tasks %}
     <div class="card">
-      <div class="card-body">
-        <h3>{{ task.username }}</h3>
-        <p>Added on {{ task.date }}</p>
-          <a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger">Delete</a>
+        <span><h3>{{ task.username }}</h3></span>
+        <span id="added-on"><h3><p>{{ task.date }}{{task.time}}</p></span>
+        <span><a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger"><button type="button" id="delete-btn">Delete</button></a></span>
       </div>
-    </div>
   {% endfor %}
 {% endblock main %}

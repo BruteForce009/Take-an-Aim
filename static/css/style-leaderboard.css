@@ -1,0 +1,33 @@
+.card {
+  display: inline;
+  text-align: center;
+  margin: 15px 15px;
+  padding: 5px 5px;
+  font-family: "Courier" ,monospace;
+  font-size: 16px;
+}
+
+#added-on {
+  font-size: 10px;
+}
+
+span {
+  float: auto;
+}
+
+#delete-btn {
+  font-family: "Andalé Mono", monospace;
+  font-weight: 500;
+  font-size: 12px;
+  color: #edf0f1;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px 15px;
+  background-color: rgba(242,22,22, 1);
+  border: none;
+  transition: all 0.3s ease 0.1s;
+}
+
+#delete-btn:hover {
+  background-color: rgba(242,22,22, 0.7);
+}
