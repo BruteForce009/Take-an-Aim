@@ -1,0 +1,1 @@
+This web application records username, tracks scores and updates leaderboard. It has been developed primarily to support another project: a computer vision based game. Code is available at Github.
