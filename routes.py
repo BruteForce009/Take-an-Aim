@@ -10,7 +10,7 @@ import forms
 def play():
     form = forms.AddTaskForm()
     if form.validate_on_submit():
-        task = models.Task(username=form.username.data, date=datetime.utcnow())
+        task = models.Task(username=form.username.data, date=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         db.session.add(task)
         db.session.commit()
         flash("Let's Play")
