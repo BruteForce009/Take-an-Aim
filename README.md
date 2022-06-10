@@ -9,4 +9,17 @@ In the terminal enter the following commands:
 
 $ python <br>
 $ from app import db <br>
-$ db.create_all()
+$ db.create_all() <br>
+$ db.create_all() <br>
+$ from models import Task <br>
+$ from datetime import datetime <br>
+
+To add a sample task:
+
+$ t1 = Task(username="abc", date=datetime.now().strftime('%Y-%m-%d %H:%M:%S')) <br>
+$ db.session.add(t1) <br>
+$ db.session.commit() <br>
+
+To view the tasks:
+
+$ Task.query.all() <br>
