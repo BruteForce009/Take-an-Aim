@@ -7,6 +7,6 @@ This web application records username, tracks scores and updates leaderboard. It
 
 In the terminal enter the following commands:
 
-$ python
-$ from app import db
+$ python <br>
+$ from app import db <br>
 $ db.create_all()
