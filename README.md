@@ -13,7 +13,7 @@ db.create_all()
 ```
 from models import Task
 from datetime import datetime
-task_1 = Task(username="user_1", date=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+task_1 = Task(username="user_1", score=60, date=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 db.session.add(task_1)
 db.session.commit()
 ```
