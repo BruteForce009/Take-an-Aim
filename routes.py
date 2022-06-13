@@ -1,9 +1,15 @@
 from app import app, db
 from flask import render_template, url_for, flash, redirect, get_flashed_messages
+from gtts import gTTS
 from datetime import datetime
 import models
 import forms
 import random
+import os
+
+
+speak='Game Over! Your Score is'
+language='en'
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -11,9 +17,13 @@ import random
 def play():
     form = forms.AddTaskForm()
     if form.validate_on_submit():
-        task = models.Task(username=form.username.data, score=random.randint(0, 100), date=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        rand_score=random.randint(0, 100)
+        task = models.Task(username=form.username.data, score=rand_score, date=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         db.session.add(task)
         db.session.commit()
+        gTTS(text=speak+f'{rand_score}', lang=language, slow=True).save("temp.mp3")
+        os.system("temp.mp3")
+        os.remove("temp.mp3")
         flash("Let's Play")
         return redirect(url_for('leaderboard'))
     return render_template('play.html', form=form)
