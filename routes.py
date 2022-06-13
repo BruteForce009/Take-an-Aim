@@ -3,6 +3,7 @@ from flask import render_template, url_for, flash, redirect, get_flashed_message
 from datetime import datetime
 import models
 import forms
+import random
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -10,7 +11,7 @@ import forms
 def play():
     form = forms.AddTaskForm()
     if form.validate_on_submit():
-        task = models.Task(username=form.username.data, date=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+        task = models.Task(username=form.username.data, score=random.randint(0, 100), date=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
         db.session.add(task)
         db.session.commit()
         flash("Let's Play")
@@ -20,7 +21,7 @@ def play():
 
 @app.route('/leaderboard', methods=['GET', 'POST'])
 def leaderboard():
-    tasks = models.Task.query.all()
+    tasks = models.Task.query.order_by(models.Task.score.desc()).all()
     return render_template('leaderboard.html', tasks=tasks)
 
 

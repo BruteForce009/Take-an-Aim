@@ -15,26 +15,25 @@ li, a, button {
   cursor: pointer;
 }
 
-/* header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
-} */
+#confirm-text, #delete-cancel {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#confirm-text {
+    margin-top: 100px;
+}
 
 header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 30px 5%;
+  padding: 30px;
   width: auto;
   /* background-color: #242526; */
   background-color: #3A3B3C;
 }
-
-/* .logo {
-  cursor: pointer;
-} */
 
 .logo {
   cursor: pointer;
@@ -48,6 +47,7 @@ header {
 .nav-links li {
   display: inline-block;
   padding: 0px 15px;
+  margin: auto;
 }
 
 .nav-links li a {

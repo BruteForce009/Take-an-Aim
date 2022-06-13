@@ -1,27 +1,35 @@
-{% extends "root.html" %}
-
-<style media="screen">
-  form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 25px;
-    font-family: "Andalé Mono", monospace;
-    font-size: 18px;
-  }
-</style>
-
-{% block main %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Take an Aim</title>
+    <link rel="icon" type="image/png" href="/static/images/aim-logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <img src="/static/images/aim-logo-x.png" class="logo" alt="logo" height=80px width=240px>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('play')}}"><button>Play</button></a></li>
+            <li><a href="{{ url_for('leaderboard')}}"><button>Leaderboard</button></a></li>
+            <li><a href="{{ url_for('about')}}"><button>About</button></a></li>
+        </ul>
+    </nav>
+</header>
   <form action="{{ url_for('delete', task_id=task_id) }}" method="post">
     {{ form.csrf_token }}
-    <div class="container-fluid" id="maindiv">
-      <div>
+    <div class="container-fluid" id="delete-confirm">
+      <div id="confirm-text">
           <p>Confirm deletion</p>
       </div>
-      <div>
+      <div id="delete-cancel">
           {{ form.submit(class="btn btn-danger") }}
           <a href="{{ url_for('leaderboard') }}" class="btn btn-primary">Cancel</a>
       </div>
     </div>
   </form>
-{% endblock %}
+</body>
+</html>

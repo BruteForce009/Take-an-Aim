@@ -1,11 +1,23 @@
 {% extends "root.html" %}
 
 {% block main %}
-    {% for task in tasks %}
-    <div class="card">
-        <span>{{ task.username }}</span>
-        <span id="added-on">{{ task.date }}</span>
-        <span><a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger"><button type="button" id="delete-btn">Delete</button></a></span>
-      </div>
-  {% endfor %}
+        <div class="card">
+            <table align="center" cellpadding="0px 100px" cellspacing="30px" id="leader-table">
+                {% for task in tasks %}
+                <tr>
+                    <td class="user-table">{{ task.username }}</td>
+                    <td class="score-table">{{ task.score }}</td>
+                    <td class="date-table">{{ task.date }}</td>
+                    <td><a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger"><button type="button" id="delete-btn">Delete</button></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
 {% endblock main %}
+
+<!--    <div class="card">-->
+<!--        <span>{{ task.username }}</span>-->
+<!--        <span>({{ task.score }})</span>-->
+<!--        <span id="added-on">{{ task.date }}</span>-->
+<!--        <span><a href="{{ url_for('delete', task_id=task.id) }}" class="btn btn-danger"><button type="button" id="delete-btn">Delete</button></a></span>-->
+<!--    </div>-->

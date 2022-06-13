@@ -14,11 +14,12 @@ class MyDateTime(db.TypeDecorator):
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(30), nullable=False)
+    score = db.Column(db.Integer, default=0)
     date = db.Column(MyDateTime, default=datetime.datetime.now, nullable=False)
     # date = db.Column(db.datetime, nullable=False)
 
     def __repr__(self):
-        return f'{self.username} created on {self.date}'
+        return f'{self.username} has scored {self.score} on {self.date}'
 
 
 '''

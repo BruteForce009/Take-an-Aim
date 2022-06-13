@@ -5,17 +5,27 @@
   margin: 15px 15px;
   padding: 5px 5px;
   font-family: "Courier" ,monospace;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-#added-on {
-  font-size: 14px;
-  margin: 5px 35px;
-  padding: 5px 15px;
+.user-table {
+    font-size: 20px;
+    font-family: "Monaco", monospace;
 }
 
-span {
-  float: auto;
+.score-table {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Monaco", monospace;
+    padding-left: 20px;
+    color: #6006cf;
+}
+
+.date-table {
+    padding: 0px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Monaco", monospace;
 }
 
 #delete-btn {
