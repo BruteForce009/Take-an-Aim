@@ -1,5 +1,5 @@
 ## Overview
-This web application records username, tracks scores and updates leaderboard. It has been developed primarily to support another project: a <a href="https://github.com/BruteForce009/vision-game-tracker">computer vision based game</a>. It uses Python with Flask framework for backend, SQLALchemy as ORM and SQLite as the database engine.
+This web application records username, tracks scores and updates leaderboard. It has been developed primarily to support another project: a <a href="https://github.com/BruteForce009/vision-game-tracker">computer vision based game setup</a>.
 
 ## Database creation
 In the terminal enter the following commands:
@@ -21,4 +21,9 @@ db.session.commit()
 #### To view the tasks:
 ```
 Task.query.all()
+```
+
+## To run the app
+```
+python3 run.py
 ```
